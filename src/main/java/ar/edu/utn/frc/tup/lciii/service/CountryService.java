@@ -74,8 +74,10 @@ public class CountryService {
                 List<Country> filterCountries = new ArrayList<>();
 
                 for (Country country : countriesList) {
-                        if (country.getLanguages().containsValue(language)) {
-                                filterCountries.add(country);
+                        if (country.getLanguages() != null) {
+                                if (country.getLanguages().containsValue(language)) {
+                                        filterCountries.add(country);
+                                }
                         }
                 }
 
