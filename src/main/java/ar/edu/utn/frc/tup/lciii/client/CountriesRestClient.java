@@ -37,8 +37,4 @@ public class CountriesRestClient {
                 .borders((List<String>) countryData.get("borders"))
                 .build();
     }
-
-    private CountryDTO mapToDTO(Country country) {
-        return new CountryDTO(country.getCode(), country.getName());
-    }
 }
